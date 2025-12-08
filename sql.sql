@@ -241,3 +241,8 @@ INSERT INTO ataque (id_profemon, nombre, descripcion)
 VALUES (12, "Permiso para el baño", "Klara bloquea el paso con una mirada fulminante. Su lado de agua empieza a hervir violentamente debido a la furia de su lado de fuego, creando una nube de vapor hirviendo alrededor de ella. Con voz tranquila pero aterradora, pregunta: '¿Quién te ha dejado salir?'");
 INSERT INTO ataque (id_profemon, nombre, descripcion)
 VALUES (12, "Voy a hacerme un café", "Klara ignora completamente al rival por un turno. Genera agua pura con su mano azul y la hierve instantáneamente con su mano de fuego, sintetizando un café expreso de alta concentración en segundos. Se lo bebe de un trago con una mirada de satisfacción.");
+
+
+
+
+aaaaa
