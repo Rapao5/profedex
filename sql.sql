@@ -1,3 +1,5 @@
+drop database profedex
+
 create database if not exists profedex;
 
 use profedex;
