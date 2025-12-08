@@ -6,7 +6,7 @@ class Controlador{
     }
 
     public function menugen($gen){
-        $lista = Profemon::listarProfemon($gen);
+        $lista = Profemon::listarProfemon((int)$gen);
         $generacion = $gen."º generacion";
         $portada = [];
         foreach($lista as $l){
@@ -24,6 +24,7 @@ class Controlador{
             $profemon = new Profemon($l['id']);
             array_push($portada, $profemon -> primeraEvolucion());
         }
+        var_dump($portada);
         include(__DIR__."/../vista/menuGen.php");
     }
 

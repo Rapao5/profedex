@@ -25,7 +25,7 @@ class Profemon{
         $this -> descripcion = $profemon["descripcion"];
         $this -> descripcionHabilidad = $profemon["habilidad_descripcion"];
         $this -> biologia = $profemon["biologia"];
-        $this -> generacion = $profemon["generacion"];
+        $this -> generacion = $profemon["id_generacion"];
     }
 
     public function getId(){ return $this -> id; }
@@ -63,7 +63,7 @@ class Profemon{
     public function listaEvoluciones(){
         $pdo = Conexion::conectar();
 
-        $stmt = $pdo -> prepare("SELECT nombre, evolucion from evoluciones where id_profemon = :id");
+        $stmt = $pdo -> prepare("SELECT nombre, evolucion from evolucion where id_profemon = :id");
 
         $stmt -> execute([
             ":id" => $this -> id
@@ -91,7 +91,7 @@ class Profemon{
 
         $stmt -> execute([":id" => $gen]);
 
-        return $stmt ->fetch(PDO::FETCH_ASSOC);
+        return $stmt ->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function listarAllProfemon(){

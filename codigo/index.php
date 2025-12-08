@@ -8,7 +8,7 @@
 
     $instancia = new Controlador();
     
-    if($accion == "menugen" || $accion == "pagprof"){
+    if($accion == "menugen" || $accion == "pagProf"){
         $instancia -> $accion($gen);
     } else {
         $instancia -> $accion();
