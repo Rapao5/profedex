@@ -143,4 +143,67 @@ footer ul{
 footer li{
     margin-bottom: 5px;
 }
+/* 1. EL CONTENEDOR (La rejilla) */
+.main_profemon > div {
+    display: grid;
+    /* 3 Columnas fijas */
+    grid-template-columns: repeat(3, 1fr); 
+    /* AUMENTAMOS EL GAP: Esto es lo que las separa visualmente */
+    gap: 50px; 
+    padding: 40px;
+    max-width: 1200px; /* Opcional: para que no se estiren al infinito en pantallas gigantes */
+    margin: 0 auto; /* Centrar la rejilla en la pantalla */
+}
 
+/* El título ocupando todo el ancho */
+.main_profemon > div > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 2. LA CARTA (El fondo blanco) */
+.profemon {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes más redondeados */
+    padding: 20px; /* Espacio interior para que la imagen no toque los bordes */
+    text-align: center;
+    /* Sombra suave para que parezcan flotar separadas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease;
+    height: 100%; /* Que ocupen toda la altura de la fila */
+}
+
+/* Efecto al pasar el mouse (opcional, ayuda a verlas separadas) */
+.profemon:hover {
+    transform: translateY(-10px);
+}
+
+/* 3. LA IMAGEN (Más pequeña y centrada) */
+.img_profemon {
+    /* Aquí controlas el tamaño real */
+    width: 180px;  
+    height: 180px; 
+    
+    /* 'contain' respeta el dibujo entero. 'cover' rellena el cuadrado. */
+    object-fit: contain; 
+    
+    /* Centrar la imagen en la tarjeta */
+    margin: 0 auto 15px auto; 
+    display: block;
+}
+
+/* Quitar subrayado de los enlaces */
+.main_profemon a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVE (Para celulares) --- */
+@media (max-width: 768px) {
+    .main_profemon > div {
+        grid-template-columns: 1fr; /* 1 sola columna en móvil */
+        gap: 30px;
+    }
+}

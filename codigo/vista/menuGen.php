@@ -9,16 +9,19 @@
     <body>
         <?php include("header.php") ?>
 
-        <main>
+        <main class="main_profemon">
+            
             <h1><?php echo $generacion ?></h1>
+            <div class="div_profemon">
             <?php for ($i = 0; $i < count($lista) ; $i++) { ?>
                 <a href="index.php?a=pagProf&g=<?php echo $lista[$i]['id'] ?>">
                     <div class="profemon">
-                        <img src="<?php echo $portada[$i]["evolucion"] ?>" alt="<?php echo $portada[$i]["nombre"] ?>">
-                        <p><?php echo $portada[$i]["nombre"] ?></p>
+                        <img class="img_profemon" src="<?php echo $portada[$i]["evolucion"] ?>" alt="<?php echo $portada[$i]["nombre"] ?>">
+                        <p class="nom_profemon"><?php echo $portada[$i]["nombre"] ?></p>
                     </div>
                 </a>
             <?php } ?>
+            <div>
         </main>
         
         <?php include("footer.php") ?>
