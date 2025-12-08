@@ -14,8 +14,8 @@
             <?php for ($i = 0; $i < count($lista) ; $i++) { ?>
                 <a href="index.php?a=pagProf&g=<?php echo $lista[$i]['id'] ?>">
                     <div class="profemon">
-                        <img src="<?php echo $portada[$i]["evolucion"] ?>" alt="<?php $portada[$i]["nombre"] ?>">
-                        <p><?php $portada[$i]["nombre"] ?></p>
+                        <img src="<?php echo $portada[$i]["evolucion"] ?>" alt="<?php echo $portada[$i]["nombre"] ?>">
+                        <p><?php echo $portada[$i]["nombre"] ?></p>
                     </div>
                 </a>
             <?php } ?>
