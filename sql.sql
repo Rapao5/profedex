@@ -173,7 +173,7 @@ VALUES
  'Klara libera una densa nube de vapor ardiente mientras mira fijamente al rival y le pregunta: ''¿Has pedido permiso para ir al baño?''. Efecto: El ambiente se vuelve pesado e irrespirable (como un día de humedad en Mazarrón). El rival se siente tan agobiado por la presión de la fecha de entrega que su Velocidad baja drásticamente y pierde turnos por ''ansiedad de compilación''.',
  'Su cuerpo funciona como un sistema de refrigeración líquida viviente. El lado naranja procesa datos a velocidades cuánticas, generando un calor inmenso, mientras que el lado azul hace circular fluidos helados para evitar el colapso del sistema. Se alimenta de ''cookies'' de navegador y de la humedad de la brisa marina.',
  'Klara es la única criatura capaz de programar bajo el sol de agosto en Mazarrón sin sudar. Se dice que el código que escribe con su mano de fuego es tan eficiente que, si no lo enfría rápidamente con su mano de agua, el papel o la pantalla se derretirían al instante. Sus alumnos saben que si su llama brilla mucho, es que ha encontrado un bug difícil.',
- 1
+ 2
 );
 INSERT INTO ataque (id_profemon, nombre, descripcion)
 VALUES (1, "Consultas", "Carlos se ajusta las gafas con severidad, abre su libro de golpe y proyecta en el aire una pizarra holográfica llena de ejercicios complejos (JOINs anidados, subconsultas imposibles...). Mira fijamente al rival y le dice con voz tronadora: 'Sacad una hoja. Quiero estas veinte consultas resueltas y optimizadas... ¡YA!'");
