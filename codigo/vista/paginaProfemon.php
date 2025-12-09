@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="vista/estilo.css">
+        <script src="vista/script.js"></script>
         <title><?php echo $nombre ?></title>
     </head>
     <body>
@@ -41,6 +42,22 @@
                     <div class="<?php echo $evo["numero"] ?>">
                         <img src="<?php echo $evo["evolucion"] ?>" alt="<?php echo $evo['nombre'] ?>">
                         <p><?php echo $evo['nombre'] ?></p>
+                    </div>
+                <?php } ?>
+            </div>
+
+            <div class="boton frases">
+                <button onclick="reproducirAudio()">Grito</button>
+                <?php for ($i = 0; $i < count($frases); $i++){ ?>
+                    <audio src="<?php echo $fra["frase"] ?>" id ="audio<?php echo $i ?>" type="audio/ogg"></audio>
+                <?php } ?>
+            </div>
+
+            <div class="ataques">
+                <?php foreach ($ataques as $ata) {?>
+                    <div class="ataque">
+                        <h1><?php echo $ata["nombre"] ?></h1>
+                        <p><?php echo $ata['descripcion'] ?></p>
                     </div>
                 <?php } ?>
             </div>

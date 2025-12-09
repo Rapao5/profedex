@@ -39,13 +39,13 @@ class Profemon{
     public function listaAtaques(){
         $pdo = Conexion::conectar();
 
-        $stmt = $pdo -> prepare("SELECT nombre from ataque where id_profemon = :id");
+        $stmt = $pdo -> prepare("SELECT nombre, descripcion from ataque where id_profemon = :id");
 
         $stmt -> execute([
             ":id" => $this -> id
         ]);
 
-        return $stmt ->fetch(PDO::FETCH_ASSOC);
+        return $stmt ->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function listaFrases(){
@@ -57,7 +57,7 @@ class Profemon{
             ":id" => $this -> id
         ]);
 
-        return $stmt ->fetch(PDO::FETCH_ASSOC);
+        return $stmt ->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function listaEvoluciones(){

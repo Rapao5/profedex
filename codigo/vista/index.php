@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="vista/estilo.css">
+        <link rel="icon" type="image/x-icon" href="../modelo/imagenes/logo.png">
+        <script src="vista/script.js"></script>
         <title>Profedex</title>
     </head>
     <body>

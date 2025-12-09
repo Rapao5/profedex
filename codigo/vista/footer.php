@@ -13,6 +13,6 @@
     </div>
 
     <div class="footer_logo">
-        <a href="#top"><img src="modelo/imagenes/logo.png" alt="Logo" class="logo"></a>
+        <a href="#top"><img src="modelo/imagenes/logo.png" alt="Logo" class="logo" id="logofooter" onmouseover="rotarLogo(id)"></a>
     </div>
 </footer>
