@@ -6,10 +6,10 @@ function rotarLogo(id){
 }
 
 function reproducirAudio(){
-    const audio1 = document.getElementById('audio1');
-    const audio2 = document.getElementById('audio2');
-    const audio3 = document.getElementById('audio3');
-    const audio4 = document.getElementById('audio4');
+    const audio1 = document.getElementById('audio0');
+    const audio2 = document.getElementById('audio1');
+    const audio3 = document.getElementById('audio2');
+    const audio4 = document.getElementById('audio3');
     const numero = Math.random();
 
     if(numero < 0.25){

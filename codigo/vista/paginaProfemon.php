@@ -1,3 +1,4 @@
+<?php var_dump($frases) ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -49,7 +50,7 @@
             <div class="boton frases">
                 <button onclick="reproducirAudio()">Grito</button>
                 <?php for ($i = 0; $i < count($frases); $i++){ ?>
-                    <audio src="<?php echo $fra["frase"] ?>" id ="audio<?php echo $i ?>" type="audio/ogg"></audio>
+                    <audio src="<?php echo $frases[$i]["frase"] ?>" id ="audio<?php echo $i ?>" type="audio/ogg"></audio>
                 <?php } ?>
             </div>
             <div class="evoluciones_titulo">
