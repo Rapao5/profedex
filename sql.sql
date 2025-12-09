@@ -1,4 +1,4 @@
-drop database profedex
+drop database profedex;
 
 create database if not exists profedex;
 
