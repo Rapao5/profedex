@@ -24,6 +24,7 @@ create table if not exists profemon(
 create table if not exists frase(
     id int primary key auto_increment,
     id_profemon int,
+    nombre varchar(255),
     frase varchar(255),
     foreign key(id_profemon) references profemon(id)
 );
