@@ -9,16 +9,16 @@
     <body>
         <?php include("header.php") ?>
         
-        <main>
+        <main class="pagina_profemon">
             <div>
                 <h1><?php echo $nombre ?></h1>
             </div>
 
-            <div>
+            <div class="div_imagen1">
                 <img src="<?php echo $portada["evolucion"] ?>" alt="<?php echo $portada["nombre"] ?>">
             </div>
 
-            <div>
+            <div class="descripcion_profemon">
                 <p><?php echo $descripcion ?></p>
             </div>
             

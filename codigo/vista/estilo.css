@@ -143,67 +143,203 @@ footer ul{
 footer li{
     margin-bottom: 5px;
 }
-/* 1. EL CONTENEDOR (La rejilla) */
 .main_profemon > div {
     display: grid;
-    /* 3 Columnas fijas */
     grid-template-columns: repeat(3, 1fr); 
-    /* AUMENTAMOS EL GAP: Esto es lo que las separa visualmente */
-    gap: 50px; 
-    padding: 40px;
-    max-width: 1200px; /* Opcional: para que no se estiren al infinito en pantallas gigantes */
-    margin: 0 auto; /* Centrar la rejilla en la pantalla */
+    gap: 20px; 
+    padding: 20px;
 }
-
-/* El título ocupando todo el ancho */
 .main_profemon > div > h1 {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; 
     text-align: center;
+    width: 100%;
     margin-bottom: 20px;
 }
-
-/* 2. LA CARTA (El fondo blanco) */
 .profemon {
-    background-color: #ffffff; /* Fondo blanco */
-    border-radius: 15px; /* Bordes más redondeados */
-    padding: 20px; /* Espacio interior para que la imagen no toque los bordes */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
     text-align: center;
-    /* Sombra suave para que parezcan flotar separadas */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
-    transition: transform 0.3s ease;
-    height: 100%; /* Que ocupen toda la altura de la fila */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-/* Efecto al pasar el mouse (opcional, ayuda a verlas separadas) */
-.profemon:hover {
-    transform: translateY(-10px);
-}
-
-/* 3. LA IMAGEN (Más pequeña y centrada) */
 .img_profemon {
-    /* Aquí controlas el tamaño real */
-    width: 180px;  
-    height: 180px; 
-    
-    /* 'contain' respeta el dibujo entero. 'cover' rellena el cuadrado. */
+    width: 300px;  
+    height: 300px;
     object-fit: contain; 
-    
-    /* Centrar la imagen en la tarjeta */
-    margin: 0 auto 15px auto; 
-    display: block;
+    margin: 0 auto; 
+    display: block; 
+    margin-bottom: 10px;
 }
 
-/* Quitar subrayado de los enlaces */
 .main_profemon a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: inherit;
 }
 
-/* --- RESPONSIVE (Para celulares) --- */
+
 @media (max-width: 768px) {
     .main_profemon > div {
-        grid-template-columns: 1fr; /* 1 sola columna en móvil */
-        gap: 30px;
+        grid-template-columns: repeat(1, 1fr); 
     }
+}
+
+main.pagina_profemon {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1100px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.pagina_profemon > div:first-child {
+    grid-column: 1 / -1; 
+    text-align: center;
+}
+.pagina_profemon > div:first-child h1 {
+    font-size: 3rem;
+    border-bottom: 4px solid #ff7b00;
+    display: inline-block;
+}
+
+@media (min-width: 900px) {
+    main.pagina_profemon {
+        grid-template-columns: 400px 1fr; 
+        grid-template-rows: auto auto auto auto;
+        align-items: start;
+    }
+    .div_imagen1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4; 
+        margin-right: 20px;
+    }
+    .pagina_profemon > div:nth-child(5) {
+        grid-column: 2 / 3;
+        grid-row: 2; 
+        margin-top: 0;
+    }
+    
+    .pagina_profemon > div:nth-child(6) {
+        grid-column: 2 / 3;
+        grid-row: 3; 
+    }
+
+    .descripcion_profemon {
+        grid-column: 1 / -1; 
+        grid-row: 4;         
+        margin-top: 20px;
+        background-color: #fff8e1;
+        border-left: 5px solid #ff1c1c;
+        padding: 20px;
+    }
+
+    main.pagina_profemon hr {
+        display: none;
+    }
+}
+
+.div_imagen1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    background-color: white;
+}
+
+.pagina_profemon p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.evoluciones_titulo {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-top: 40px;
+}
+
+.evoluciones {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.evoluciones > div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    width: 240px; 
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.evoluciones > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 123, 0, 0.4);
+}
+
+.evoluciones img {
+    width: 180px; 
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.evoluciones p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #444;
+    margin: 0;
+}
+
+.evoluciones_titulo {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+}
+.evoluciones {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; 
+}
+.evoluciones > div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: none; 
+    transform: none;
+}
+
+.evoluciones > div:hover {
+    transform: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    cursor: default;
+}
+.evoluciones img {
+    width: 100%;
+    max-width: 350px; 
+    height: auto; 
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.evoluciones p {
+    font-size: 1.5rem; 
+    font-weight: 800;
+    color: #333;
+    margin: 0;
 }
