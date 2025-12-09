@@ -1,4 +1,3 @@
-<?php var_dump($frases) ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
