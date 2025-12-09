@@ -52,7 +52,9 @@
                     <audio src="<?php echo $fra["frase"] ?>" id ="audio<?php echo $i ?>" type="audio/ogg"></audio>
                 <?php } ?>
             </div>
-
+            <div class="evoluciones_titulo">
+                <h1>Ataques</h1>
+            </div>
             <div class="ataques">
                 <?php foreach ($ataques as $ata) {?>
                     <div class="ataque">
